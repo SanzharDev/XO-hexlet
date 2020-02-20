@@ -127,6 +127,4 @@ public class FieldTest {
         } catch (final InvalidPointException e) {}
     }
 
-
-
 }
