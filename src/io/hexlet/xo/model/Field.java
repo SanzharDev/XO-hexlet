@@ -7,13 +7,25 @@ import java.awt.Point;
 
 public class Field {
 
-    private final int FIELD_SIZE = 3;
+    private final int FIELD_SIZE;
 
     private final int MIN_COORDINATE = 0;
 
-    private final int MAX_COORDINATE = FIELD_SIZE;
+    private final int MAX_COORDINATE;
 
-    private final Figure[][] field = new Figure[FIELD_SIZE][FIELD_SIZE];
+    private final Figure[][] field;
+
+    public Field() {
+        this.FIELD_SIZE = 3;
+        this.MAX_COORDINATE = FIELD_SIZE;
+        field = new Figure[FIELD_SIZE][FIELD_SIZE];
+    }
+
+    public Field(int FIELD_SIZE, int MAX_COORDINATE, Figure[][] field) {
+        this.FIELD_SIZE = FIELD_SIZE;
+        this.MAX_COORDINATE = MAX_COORDINATE;
+        this.field = field;
+    }
 
     public int getSize() {
         return FIELD_SIZE;
