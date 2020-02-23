@@ -5,14 +5,13 @@ import io.hexlet.xo.model.Figure;
 import io.hexlet.xo.model.exceptions.InvalidPointException;
 
 import java.awt.*;
-import java.util.LinkedList;
 
 public class WinnerController {
 
     public Figure getWinner(final Field field) throws InvalidPointException {
-        final Figure diagWinner = winnerOnDiagonal(field);
-        if (diagWinner != null) {
-            return diagWinner;
+        final Figure diagonalWinner = winnerOnDiagonal(field);
+        if (diagonalWinner != null) {
+            return diagonalWinner;
         }
         for (int i = 0; i < field.getSize(); i++) {
             final Figure rowWinner = winnerOnRow    (field, i);
